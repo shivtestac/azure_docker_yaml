@@ -9,9 +9,10 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker-azure-container-registry'
+    repository: 'build1'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'build1:latest'
+    tags: 'latest'
 
 - task: AzureWebAppContainer@1
   inputs:
